@@ -17,7 +17,7 @@ git clone https://github.com/huachao1001/Amazing-Mode.git
 
 ##下载jar包
 
- 
+ [Download Amazing-Mode.jar](https://raw.githubusercontent.com/huachao1001/Amazing-Mode/master/Amazing-Mode.jar)
 
 ##安装 Plugin jar包
 
