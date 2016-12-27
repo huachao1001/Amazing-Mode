@@ -1,0 +1,45 @@
+<idea-plugin version="2">
+    <id>com.huachao.plugin.AmazingMode</id>
+    <name>AmazingMode</name>
+    <version>1.0</version>
+    <vendor email="huachao1001@qq.com" url="http://blog.csdn.net/huachao1001">HuaChao</vendor>
+
+    <description><![CDATA[
+        酷炫的编辑效果，使用前请确保开关已开启！
+    ]]></description>
+
+    <change-notes><![CDATA[
+       第一个版本
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="125.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <applicationService
+                serviceImplementation="com.huachao.plugin.util.GlobalVar"
+                serviceInterface="com.huachao.plugin.util.GlobalVar"
+        />
+    </extensions>
+
+    <actions>
+        <group id="AmazingMode.AmazingModeGroup" text="AmazingMode" popup="true">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action id="AmazingMode.EnableAction" class="com.huachao.plugin.action.EnableAction" text="Enable"
+                    description="插件开关"/>
+            <action id="AmazingMode.RandomColorAction" class="com.huachao.plugin.action.RandomColorAction"
+                    text="Random Color"/>
+        </group>
+
+
+    </actions>
+
+</idea-plugin>
